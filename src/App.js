@@ -1,14 +1,13 @@
-import { Route, Routes } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Home from "./pages/Home";
+import Navbar from './Components/Navbar.jsx';
+import { Outlet } from 'react-router-dom';
+import Footer from './Components/Footer.jsx';
 
 function App() {
   return (
     <>
-     <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+      <Navbar/>
+         <Outlet/>  
+      <Footer/>        
     </>
   );
 }
